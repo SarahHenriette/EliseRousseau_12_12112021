@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    height: 89px;
+    // background-color: red;
+    margin-top: 64px;
+    &-title, &-text {
+        margin: 0;
+        text-align: left;
+        line-height: 24px;
+    }
+    &-title_name {
+        color: #E60000;
+    }
+    &-text {
+        line-height: 88px;
+    }
+}
