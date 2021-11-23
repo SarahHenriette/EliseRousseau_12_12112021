@@ -1,6 +1,6 @@
 import React from 'react'
 import './../styles/sass/layout/nutrient.scss'
-import logo from './../assets/logo.svg'
+// import logo from './../assets/logo.svg'
 
 function Nav(props) {
     return (

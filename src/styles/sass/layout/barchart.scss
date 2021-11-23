@@ -1,0 +1,44 @@
+.barchart-title {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #20253A;
+    text-align: start;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 32px;
+}
+
+.barchart-legend {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 26px;
+    &_calories {
+        .barchart-legendName_circle {
+            background-color: #E60000;
+        }
+    }
+    &_poids {
+        .barchart-legendName_circle {
+            background-color: #282D30;
+        }
+    }
+    .barchart-legendName {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #74798C;
+        margin-left: 32px;
+        &_circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 50px;
+            margin-right: 10px;
+        }
+    }
+   
+}
