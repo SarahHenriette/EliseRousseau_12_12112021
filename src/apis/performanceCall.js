@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-console.log("activities")
+console.log("performance")
 
 
-export default function ActivitiesCall() {
+export default function PerformanceCall() {
     const [items, setItems] = useState({});
-    // console.log(items)
   
     // Remarque : le tableau vide de dépendances [] indique
     // que useEffect ne s’exécutera qu’une fois, un peu comme
@@ -12,7 +11,7 @@ export default function ActivitiesCall() {
  
     useEffect(() => {
       async function userFetch() {
-        let response = await fetch("http://localhost:3000/user/18/activities")
+        let response = await fetch("http://localhost:3000/user/18/performance")
        
         if(!response.ok) {
           throw new Error(`Erreur HTTP ! statut : ${response.status}`);

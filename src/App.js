@@ -9,10 +9,14 @@ import Header from './components/Header'
 import Nutrient from './components/Nutrient'
 import BarreChart from './components/BarreChart'
 import LineChart from './components/LineChart'
+import RadarChart from './components/RadarChart'
 
 import UserCall from './apis/userCall'
 import ActivityCall from './apis/activityCall'
 import AverageSessionCall from './apis/averageSessionCall'
+import PerformanceCall from './apis/performanceCall'
+
+
 // import TodayScorenCall from './apis/todayScoreCall'
 import iconCalories from './assets/icons/calories-icon.svg'
 import iconProtein from './assets/icons/protein-icon.svg'
@@ -28,15 +32,18 @@ function App() {
 const infosUser = UserCall()
 const activity = ActivityCall()
 const averageSession = AverageSessionCall()
+const performance = PerformanceCall()
 // const todayScore = TodayScorenCall()
 // const activities = ActivitiesCall()
 // const keyDatan = KeyDataCall()
 
 if(infosUser.items.data !== undefined ) {
   const user = infosUser.items.data
-  console.log(infosUser)
-  // console.log(activity)
-  console.log(averageSession)
+  // console.log(infosUser)
+  // // console.log(activity)
+  // console.log(averageSession)
+  // console.log(performance)
+  console.log("c'est dure la viie")
   // console.log(todayScore)
   // console.log(activities)
   // console.log(keyDatan)
@@ -63,6 +70,10 @@ if(infosUser.items.data !== undefined ) {
                     <div className="linechart">
                       <h2 className="linechart-title">Durée moyenne des sessions</h2>
                       <LineChart averageSession={averageSession}/>
+                      {/* <p className="linechart-days"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></p> */}
+                    </div>
+                    <div className="radarchart">
+                      <RadarChart performance={performance}/>
                     </div>
                 </div>
               </div>

@@ -9,10 +9,12 @@ export default class Example extends PureComponent {
   render() {
    
     const activity = this.props.activity
-    
+    const dayFormatter = (item) => item.day.split("-")[2];
+
     if(activity.items.data !== undefined ) {
       // console.log(activity.items.data.sessions)
       const sessions = activity.items.data.sessions
+      console.log(sessions)
       return (
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -27,8 +29,8 @@ export default class Example extends PureComponent {
             }}
           >
             <CartesianGrid strokeDasharray="3 3" vertical={false}/>
-            <XAxis dataKey="day"/>
-            <YAxis orientation="right"/>
+            <XAxis dataKey={dayFormatter} tickLine={false}/>
+            <YAxis orientation="right" tickLine={false} tickCount={3}/>
             <Tooltip />
             {/* <Legend width="80%" layout="horizontal" verticalAlign="top" align="end" /> */}
             <Bar dataKey="kilogram" barSize={7} fill="#282D30" radius={[10, 10, 0, 0]}/>
