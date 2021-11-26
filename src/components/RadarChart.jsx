@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import './../styles/sass/layout/radarchart.scss'
 
 
 export default class Example extends PureComponent {
@@ -8,11 +9,11 @@ export default class Example extends PureComponent {
   render() {
     const performance = this.props.performance
     if(performance.items.data !== undefined ) {
-        console.log(performance)
+        // console.log(performance)
         const da = performance.items.data.data
         const kind = performance.items.data.kind
         const kindFormatter = (item) => kind[item.kind].charAt(0).toUpperCase() + kind[item.kind].slice(1);
-        console.log(kind)
+        // console.log(kind)
 
         return (
             <ResponsiveContainer width="100%" height="100%">

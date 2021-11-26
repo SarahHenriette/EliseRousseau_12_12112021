@@ -1,0 +1,38 @@
+@import './../base/mixins.scss';
+
+.radialchart {
+    background: #FBFBFB;
+    width: 258px;
+    height: 263px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+    position: relative;
+    @include tablet-only{
+        margin-top: 1em;
+      }
+      &-title {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        color: #20253A;
+        text-align: start;
+        width: 147px;
+        position: absolute;
+        top: 15px;
+        left: 32px;
+      }
+    &-text {
+        color: #74798C;
+        font-size: 16px;
+        width: 35%;
+        text-align: center;
+        margin: auto;
+        span {
+        font-weight: bold;
+        font-size: 26px;
+        text-align: center;
+        color: #282D30;
+        }
+    }
+    
+}

@@ -10,6 +10,7 @@ import Nutrient from './components/Nutrient'
 import BarreChart from './components/BarreChart'
 import LineChart from './components/LineChart'
 import RadarChart from './components/RadarChart'
+import RadialChart from './components/RadialChart'
 
 import UserCall from './apis/userCall'
 import ActivityCall from './apis/activityCall'
@@ -39,7 +40,7 @@ const performance = PerformanceCall()
 
 if(infosUser.items.data !== undefined ) {
   const user = infosUser.items.data
-  // console.log(infosUser)
+  console.log(user)
   // // console.log(activity)
   // console.log(averageSession)
   // console.log(performance)
@@ -70,10 +71,13 @@ if(infosUser.items.data !== undefined ) {
                     <div className="linechart">
                       <h2 className="linechart-title">Durée moyenne des sessions</h2>
                       <LineChart averageSession={averageSession}/>
-                      {/* <p className="linechart-days"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></p> */}
                     </div>
                     <div className="radarchart">
                       <RadarChart performance={performance}/>
+                    </div>
+                    <div className="radialchart">
+                      <h2 className="radialchart-title">Score</h2>
+                      <RadialChart infoScore= {user}/>
                     </div>
                 </div>
               </div>

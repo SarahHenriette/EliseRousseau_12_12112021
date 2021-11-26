@@ -4,6 +4,8 @@
     background-color: #020203;
     display: flex;
     justify-content: space-around;
+    z-index: 2;
+    position: relative;
     &-logo {
         width: 178px;
         height: auto;
