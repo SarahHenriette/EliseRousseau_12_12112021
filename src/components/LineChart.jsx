@@ -1,37 +1,32 @@
 import React, { PureComponent } from 'react';
-import { AreaChart, Area,LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine} from 'recharts';
+import { AreaChart, Area, XAxis, Tooltip, ResponsiveContainer} from 'recharts';
 import './../styles/sass/layout/linechart.scss'
-
-const days = {
-  1: "L",
-  2: "M",
-  3: "M",
-  4: "J",
-  5: "V",
-  6: "S",
-  7: "D"
-}
-const dayFormatter = (item) => days[item.day];
+import PropTypes from 'prop-types';
 
 
 
-export default class Example extends PureComponent {
+/**
+ * Represents a LineChart.
+ * @param {object} datasUser - object contain datas user.
+ * @param {array} sessions - array contain sessions average.
+ * @param {function} CustomTooltip - return display tooltip
+ */
+export default class Linechart extends PureComponent {
   render() {
-    const averageSession = this.props.averageSession
-    const CustomTooltip = ({ active, payload, label }) => {
-      if (active) {
-        return (
-          <div className="custom-tooltip_lineChart" >
-            <p className="label">{`${payload[0].value}min`}</p>
-          </div>
-        );
-      }
-    
-      return null;
-    };
-    
-    if(averageSession.items.data !== undefined ) {
-      const sessions = averageSession.items.data.sessions
+    const datasUser = this.props.averageSession
+    if(datasUser.items.data !== undefined ) {
+      const sessions = datasUser.items.data.sessions
+      const CustomTooltip = ({ active, payload }) => {
+        if (active) {
+      
+          return (
+            <div className="custom-tooltip_lineChart" >
+              <p className="label">{`${payload[0].value}min`}</p>
+            </div>
+          );
+        }
+        return null;
+      };
 
         return (
             <ResponsiveContainer width="100%" heigth="100%" >
@@ -49,7 +44,7 @@ export default class Example extends PureComponent {
                   </defs>
                   
                   <Area type="monotone" dataKey="sessionLength" stroke="url(#color)" strokeWidth={2}  fill="rgba(255, 255, 255, 0.106534) " activeDot={{ r: 4, fill: "#FFF", strokeWidth: 6, stroke: "rgba(255, 255, 255, 0.6)" }} />
-                  <XAxis dataKey={dayFormatter} strokeWidth={0} fontSize={12} stroke="#FFF" opacity={0.6}  dy={-40} dx={0} tickLine={false} tick={{fontSize: 9, angle: 0}} padding={{left:10, right:10}} position="center" />
+                  <XAxis strokeWidth={0} fontSize={12} stroke="#FFF" opacity={0.6}  dy={-40} dx={0} tickLine={false} tick={{fontSize: 9, angle: 0}} padding={{left:10, right:10}} position="center" />
                   <Tooltip content={<CustomTooltip />} cursor={false}/>
 
                 </AreaChart>
@@ -60,4 +55,9 @@ export default class Example extends PureComponent {
     }
    
   }
+}
+
+
+Linechart.propTypes = {
+  averageSession: PropTypes.object
 }

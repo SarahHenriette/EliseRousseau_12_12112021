@@ -7,7 +7,7 @@ import Nav from './components/Nav'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import Nutrient from './components/Nutrient'
-import BarreChart from './components/BarreChart'
+import BarreChart from './components/BarChart'
 import LineChart from './components/LineChart'
 import RadarChart from './components/RadarChart'
 import RadialChart from './components/RadialChart'
@@ -17,38 +17,29 @@ import ActivityCall from './apis/activityCall'
 import AverageSessionCall from './apis/averageSessionCall'
 import PerformanceCall from './apis/performanceCall'
 
-
-// import TodayScorenCall from './apis/todayScoreCall'
 import iconCalories from './assets/icons/calories-icon.svg'
 import iconProtein from './assets/icons/protein-icon.svg'
 import iconCarbs from './assets/icons/carbs-icon.svg'
 import iconLipide from './assets/icons/fat-icon.svg'
 
-// import ActivitiesCall from './apis/activitiesCall'
-// import KeyDataCall from './apis/keyDataCall'
 
-
+/**
+ * represents display application
+ * @param {object} infosUser- contain datas of user
+ * @param {object} activity- contain datas of activity user
+ * @param {object} averageSession- contain datas of average session user
+ * @param {object} performance- contain datas of performance user
+ */
 function App() {
 
 const infosUser = UserCall()
 const activity = ActivityCall()
 const averageSession = AverageSessionCall()
 const performance = PerformanceCall()
-// const todayScore = TodayScorenCall()
-// const activities = ActivitiesCall()
-// const keyDatan = KeyDataCall()
+
 
 if(infosUser.items.data !== undefined ) {
   const user = infosUser.items.data
-  console.log(user)
-  // // console.log(activity)
-  // console.log(averageSession)
-  // console.log(performance)
-  console.log("c'est dure la viie")
-  // console.log(todayScore)
-  // console.log(activities)
-  // console.log(keyDatan)
-
 
   return (
     <div className="App">

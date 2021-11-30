@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-console.log("performance")
 
-
+/**
+ * call API for mock datas performance user
+ * @param {object} items- state contain datas of api call
+ * @param {response} response- mock datas with fetch
+ * @param {object} datas- get the datas in json format
+ */
 export default function PerformanceCall() {
     const [items, setItems] = useState({});
   
-    // Remarque : le tableau vide de dépendances [] indique
-    // que useEffect ne s’exécutera qu’une fois, un peu comme
-    // componentDidMount()
  
     useEffect(() => {
       async function userFetch() {

@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
-console.log("average sessions")
 
-
+/**
+ * call API for mock datas average sessions user
+ * @param {object} items- state contain datas of api call
+ * @param {response} response- mock datas with fetch
+ * @param {object} datas- get the datas in json format
+ */
 export default function AverageSessionCall() {
     const [items, setItems] = useState({});
-    // console.log(items)
-  
-    // Remarque : le tableau vide de dépendances [] indique
-    // que useEffect ne s’exécutera qu’une fois, un peu comme
-    // componentDidMount()
- 
+
     useEffect(() => {
       async function userFetch() {
         let response = await fetch("http://localhost:3000/user/18/average-sessions")

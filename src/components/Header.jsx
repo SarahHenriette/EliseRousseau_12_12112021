@@ -1,6 +1,12 @@
 import React from 'react'
 import './../styles/sass/components/header.scss'
+import PropTypes from 'prop-types';
 
+
+/**
+ * Represents a Header.
+ * @param {object} props.infosUser - object contain datas user.
+ */
 function Header(props) {
     return (
         <header className="header">
@@ -8,6 +14,10 @@ function Header(props) {
             <p className="header-text">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </header>
     )
+}
+
+Header.propTypes = {
+    infosUser: PropTypes.object
 }
 
 export default Header;

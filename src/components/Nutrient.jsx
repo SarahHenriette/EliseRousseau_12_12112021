@@ -1,8 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import './../styles/sass/layout/nutrient.scss'
-// import logo from './../assets/logo.svg'
 
-function Nav(props) {
+/**
+ * Represents navigations of application.
+ * @param {string} props.icon- image url.
+ * @param {string} props.nutrient- name of nutrient.
+ */
+function Nutrient(props) {
     return (
       <div className='nutrient'>
           <img src={props.icon} alt=""/>
@@ -11,4 +16,11 @@ function Nav(props) {
     )
 }
 
-export default Nav;
+
+Nutrient.propTypes = {
+  icon: PropTypes.string,
+  nutrient: PropTypes.string
+}
+
+
+export default Nutrient;

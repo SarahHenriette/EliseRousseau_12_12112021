@@ -1,6 +1,12 @@
 import React from 'react'
 import './../styles/sass/layout/nav.scss'
 import logo from './../assets/logo.svg'
+
+
+/**
+ * Represents navigations of application.
+ * @param {string} logo - image url.
+ */
 function Nav() {
     return (
         <nav className="nav">
