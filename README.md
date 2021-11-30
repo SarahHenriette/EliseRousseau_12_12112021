@@ -6,7 +6,7 @@ SportSee is an OpenClassRoom project. It's a startup dedicated to sports coachin
 The new dashboard is based on React.
 
 # Prerequisites
-* Un éditeur de code tel que VSCode, VSCodium ou encore SublimeText.
+* A code editor such as VSCode, VSCodium or SublimeText.
 * NodeJS. See NodeJs website for installation instructions
 * Yarn or npm. See Yarn website for installation instructions. For npm, use command "npm install"
 
