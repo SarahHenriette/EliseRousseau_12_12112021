@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
-import './../styles/sass/layout/radarchart.scss'
+import './../../styles/sass/layout/radarchart.scss'
 
 
 /**

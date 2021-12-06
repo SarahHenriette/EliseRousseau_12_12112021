@@ -9,20 +9,18 @@ import { useState, useEffect } from 'react';
 export default function PerformanceCall() {
     const [items, setItems] = useState({});
   
- 
     useEffect(() => {
-      async function userFetch() {
-        let response = await fetch("http://localhost:3000/user/18/performance")
-       
-        if(!response.ok) {
-          throw new Error(`Erreur HTTP ! statut : ${response.status}`);
-
+      fetch("http://localhost:3000/user/18/performance")
+      .then(response => response.json())
+      .then(
+        (result) => {
+          setItems(result)
+        }, 
+        (error) => {
+          throw new Error(`Erreur HTTP ! statut : ${error}`);
         }
-      let datas = await response.json()
-      setItems(datas)
-    
-      }
-      userFetch()
+      )
     }, [])
+
     return {items}
   }

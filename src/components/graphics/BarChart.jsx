@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
-import './../styles/sass/layout/barchart.scss'
+import './../../styles/sass/layout/barchart.scss'
 
 
 /**

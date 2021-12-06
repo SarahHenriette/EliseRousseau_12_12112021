@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { RadialBarChart, RadialBar, Legend, ResponsiveContainer} from 'recharts';
 import PropTypes from 'prop-types';
-import './../styles/sass/layout/radialchart.scss'
+import './../../styles/sass/layout/radialchart.scss'
 
 
 /**

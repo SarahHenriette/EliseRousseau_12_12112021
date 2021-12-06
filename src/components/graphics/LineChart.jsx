@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, Tooltip, ResponsiveContainer} from 'recharts';
-import './../styles/sass/layout/linechart.scss'
+import './../../styles/sass/layout/linechart.scss'
 import PropTypes from 'prop-types';
 
 
