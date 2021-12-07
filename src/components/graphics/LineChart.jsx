@@ -16,6 +16,9 @@ export default class Linechart extends PureComponent {
     const datasUser = this.props.averageSession
     if(datasUser.items.data !== undefined ) {
       const sessions = datasUser.items.data.sessions
+      const days = ["L", "M", "M", "J", "V", "S", "D"]
+
+      const dayFormatter = (item) => days[item.day - 1];
       const CustomTooltip = ({ active, payload }) => {
         if (active) {
       
@@ -44,7 +47,7 @@ export default class Linechart extends PureComponent {
                   </defs>
                   
                   <Area type="monotone" dataKey="sessionLength" stroke="url(#color)" strokeWidth={2}  fill="rgba(255, 255, 255, 0.106534) " activeDot={{ r: 4, fill: "#FFF", strokeWidth: 6, stroke: "rgba(255, 255, 255, 0.6)" }} />
-                  <XAxis strokeWidth={0} fontSize={12} stroke="#FFF" opacity={0.6}  dy={-40} dx={0} tickLine={false} tick={{fontSize: 9, angle: 0}} padding={{left:10, right:10}} position="center" />
+                  <XAxis dataKey={dayFormatter}  strokeWidth={0} fontSize={12} stroke="#FFF" opacity={0.6}  dy={-40} dx={0} tickLine={false} tick={{fontSize: 9, angle: 0}} padding={{left:10, right:10}} position="center" />
                   <Tooltip content={<CustomTooltip />} cursor={false}/>
 
                 </AreaChart>
