@@ -6,6 +6,7 @@ import './../styles/sass/layout/nutrient.scss'
  * Represents navigations of application.
  * @param {string} props.icon- image url.
  * @param {string} props.nutrient- name of nutrient.
+ * @return nutrient
  */
 function Nutrient(props) {
     return (

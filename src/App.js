@@ -22,10 +22,10 @@ import iconLipide from './assets/icons/fat-icon.svg'
 
 /**
  * represents display application
- * @param {object} infosUser- contain datas of user
- * @param {object} activity- contain datas of activity user
- * @param {object} averageSession- contain datas of average session user
- * @param {object} performance- contain datas of performance user
+ * @const {object} infosUser- contain datas of user
+ * @const {object} activity- contain datas of activity user
+ * @const {object} averageSession- contain datas of average session user
+ * @const {object} performance- contain datas of performance user
  */
 function App() {
 

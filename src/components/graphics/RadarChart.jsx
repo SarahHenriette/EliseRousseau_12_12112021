@@ -6,10 +6,11 @@ import './../../styles/sass/layout/radarchart.scss'
 
 /**
  * Represents a Radarchart.
- * @param {object} datasUser - object contain datas user.
- * @param {array} datas - array contain datas radial chart.
- * @param {object} kind - contain kind.
- * @param {function} kindFormatter - return the kind with first letter in uppercase.
+ * @const {object} datasUser - object contain datas user.
+ * @const {array} datas - array contain datas radial chart.
+ * @const {object} kind - contain kind.
+ * @function kindFormatter - return the kind with first letter in uppercase.
+ * @return RadarChart
  * 
  */
 export default class Radarchart extends PureComponent {

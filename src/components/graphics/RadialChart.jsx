@@ -6,11 +6,12 @@ import './../../styles/sass/layout/radialchart.scss'
 
 /**
  * Represents a Radarchart.
- * @param {object} score - object contain datas user.
- * @param {number} pourcentScore - calcul score in pourcentage.
- * @param {number} degreScore - calcul score pourcentage in degre.
- * @param {data} data - return text contain of legend and infos in radial bar.
- * @param {object} style - contain style of legend 
+ * @const {object} score - object contain datas user.
+ * @const {number} pourcentScore - calcul score in pourcentage.
+ * @const {number} degreScore - calcul score pourcentage in degre.
+ * @const {array} data - return text contain of legend and infos in radial bar.
+ * @const {object} style - contain style of legend 
+ * @return RadialChart
  * 
  */
 export default class Radialchart extends PureComponent {
@@ -31,6 +32,8 @@ export default class Radialchart extends PureComponent {
       transform: 'translate(0, -50%)',
       lineHeight: '24px',
     };
+    console.log(style)
+
     
     return(
       <ResponsiveContainer width="100%" height="100%">

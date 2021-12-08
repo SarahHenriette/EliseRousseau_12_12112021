@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 
 /**
  * call API for mock datas user
- * @param {object} items- state contain datas of api call
- * @param {response} response- mock datas with fetch
- * @param {object} datas- get the datas in json format
+ * @return {object} items- state contain datas of api call
  */
 export default function UserCall() {
     const [items, setItems] = useState({});
@@ -21,6 +19,7 @@ export default function UserCall() {
         }
       )
     }, [])
+    console.log(items)
 
     return {items}
 

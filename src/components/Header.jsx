@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 /**
  * Represents a Header.
  * @param {object} props.infosUser - object contain datas user.
+ * @eturn Header
  */
 function Header(props) {
     return (

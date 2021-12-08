@@ -11,7 +11,7 @@ import iconMuscu from './../assets/icons/muscu.svg'
  * @param {string} iconNatation - image natation url.
  * @param {string} iconBike - image bike url.
  * @param {string} iconMuscu - image muscu url.
- * 
+ * @return Sidebar
  * 
  */
 function Sidebar() {

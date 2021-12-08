@@ -6,10 +6,11 @@ import './../../styles/sass/layout/barchart.scss'
 
 /**
  * Represents a Barchart.
- * @param {object} datasUser - object contain datas user.
- * @param {array} sessions - array contain sessions activity.
- * @param {function} dayFormatter - return the day of week
- * @param {function} CustomTooltip - return display tooltip
+ * @const {object} datasUser - object contain datas user.
+ * @const {array} sessions - array contain sessions activity.
+ * @func dayFormatter - return the day of week
+ * @func  CustomTooltip - return display tooltip
+ * @return Barchart
  */
 export default class Barchart extends PureComponent {
   render() {
@@ -33,15 +34,7 @@ export default class Barchart extends PureComponent {
       return (
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
-            width={500}
-            height={300}
             data={sessions}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
           >
             <CartesianGrid strokeDasharray="3 3" vertical={false}/>
             <XAxis dataKey={dayFormatter} tickLine={false}/>

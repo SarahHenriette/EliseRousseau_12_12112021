@@ -7,9 +7,10 @@ import PropTypes from 'prop-types';
 
 /**
  * Represents a LineChart.
- * @param {object} datasUser - object contain datas user.
- * @param {array} sessions - array contain sessions average.
- * @param {function} CustomTooltip - return display tooltip
+ * @const {object} datasUser - object contain datas user.
+ * @const {array} sessions - array contain sessions average.
+ * @func CustomTooltip - return display tooltip
+ * @return LineChart
  */
 export default class Linechart extends PureComponent {
   render() {
