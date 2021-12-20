@@ -13,10 +13,10 @@ import './../../styles/sass/layout/barchart.scss'
  * @return Barchart
  */
 export default class Barchart extends PureComponent {
+ 
   render() {
-    const datasUser = this.props.activity
-    if(datasUser.items.data !== undefined ) {
-      const sessions = datasUser.items.data.sessions
+    if(this.props.activity.items.data !== undefined ) {
+      const sessions = this.props.activity.items.data.sessions
       const dayFormatter = (item) => item.day.split("-")[2];
       const CustomTooltip = ({ active, payload }) => {
         if (active) {

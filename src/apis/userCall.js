@@ -19,10 +19,8 @@ export default function UserCall() {
         }
       )
     }, [])
-    console.log(items)
 
     return {items}
-
   }
 
  

@@ -17,7 +17,7 @@ import './../../styles/sass/layout/radialchart.scss'
 export default class Radialchart extends PureComponent {
   render() {
     const score = this.props.infoScore
-    const pourcentScore = score.score*100 
+    const pourcentScore = score.score ? score.score*100 : score.todayScore*100
     const degreScore = 360* pourcentScore/100
     const data = [
       {
@@ -32,9 +32,7 @@ export default class Radialchart extends PureComponent {
       transform: 'translate(0, -50%)',
       lineHeight: '24px',
     };
-    console.log(style)
 
-    
     return(
       <ResponsiveContainer width="100%" height="100%">
       <RadialBarChart cx="50%" cy="50%" innerRadius="90%" outerRadius="100%" barSize={7} data={data}  startAngle={90} endAngle={90 + degreScore}  strokeWidth={15}>
