@@ -1,9 +1,8 @@
 
 <img src="./public/logo.png"/>
-SportSee is an OpenClassRoom project. It's a startup dedicated to sports coaching witch wanted to renewal its user's dashboard.
 
-# Getting Started with SportSee
-The new dashboard is based on React.
+# SPORTSEE
+I worked as a developer at SportSee, a startup dedicated to sports coaching. In full growth, the company will today launch a new version of the user profile page. This page will in particular allow the user to follow the number of sessions carried out as well as the number of calories burned.
 
 # Prerequisites
 * A code editor such as VSCode, VSCodium or SublimeText.
@@ -20,3 +19,12 @@ The new dashboard is based on React.
 
 4. yarn start or npm start, then accept to run the app on another port because 3000 is used by the back-end and open http://localhost:3001
 
+
+## Compétences 
+- Ensure the quality of the data of an application
+- Interact with a web service
+- Develop advanced graphical elements using JavaScript libraries
+- Produce technical documentation for an application
+
+## Démo
+https://elise-rousseau-11-22102021.vercel.app/
