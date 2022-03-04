@@ -25,6 +25,3 @@ I worked as a developer at SportSee, a startup dedicated to sports coaching. In 
 - Interact with a web service
 - Develop advanced graphical elements using JavaScript libraries
 - Produce technical documentation for an application
-
-## Démo
-https://elise-rousseau-11-22102021.vercel.app/
