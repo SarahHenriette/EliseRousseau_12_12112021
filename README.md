@@ -20,7 +20,7 @@ I worked as a developer at SportSee, a startup dedicated to sports coaching. In 
 4. yarn start or npm start, then accept to run the app on another port because 3000 is used by the back-end and open http://localhost:3001
 
 
-## Compétences 
+## Compétences acquises
 - Ensure the quality of the data of an application
 - Interact with a web service
 - Develop advanced graphical elements using JavaScript libraries
